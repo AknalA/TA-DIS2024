@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK TEKNOLOGI BALUNG</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #CFC6C8;">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #664E86;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"
+                            style="color:#FAFAFA"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button"><i
+                            class="fas fa-expand-arrows-alt" style="color:#FAFAFA"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <p class="brand-link">
+                <span class="brand-text font-weight-semibold ml-2">e-PPDB</span>
+            </p>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="asset/photoProfile/blank-profile.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Aknal Arya Adi P</a>
+                        <div>
+                            <i class="material-icons" style="color: green; font-size: 12px;">circle</i>
+                            <a href="#">online</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon bi bi-people-fill"></i>
+                                <p>Formulir Pendaftaran</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="prestasi.html" class="nav-link">
+                                <i class="nav-icon bi bi-check"></i>
+                                <p>Prestasi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="jurusan.html" class="nav-link">
+                                <i class="nav-icon bi bi-file"></i>
+                                <p>Berkas Pendukung</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="setting.html" class="nav-link">
+                                <i class="nav-icon bi bi-gear"></i>
+                                <p>Pengaturan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <div class="content-wrapper" style="background-color: #FFFFFF">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <p class="m-0 text-black">Isian dengan tanda * wajib diisi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Formulir Pendaftaran</h3>
+                    </div>
+                    <form>
+                        <div class="card-body">
+
+                            <!-- Informasi Pribadi -->
+                            <h5>Informasi Pribadi</h5>
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Masukkan nama" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Masukkan email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="notelp">No Telepon</label>
+                                <input type="tel" class="form-control" id="notelp" name="no_telp"
+                                    placeholder="Masukkan no telepon" pattern="[0-9]{10,13}"
+                                    title="Nomor telepon harus antara 10-13 digit angka" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Jenis Kelamin</label>
+                                <select class="form-control" id="gender" name="gender" required>
+                                    <option value="" disabled selected>Pilih jenis kelamin</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Alamat Lengkap</label>
+                                <textarea class="form-control" id="address" name="address" rows="3"
+                                    placeholder="Masukkan alamat lengkap" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Foto Profil</label>
+                                <input type="file" class="form-control-file" id="photo" name="photo"
+                                    accept=".jpg, .jpeg, .png">
+                            </div>
+
+                            <!-- Informasi Orang Tua/Wali -->
+                            <h5>Informasi Orang Tua/Wali</h5>
+                            <div class="form-group">
+                                <label for="parent_name">Nama Orang Tua/Wali</label>
+                                <input type="text" class="form-control" id="parent_name" name="parent_name"
+                                    placeholder="Masukkan nama orang tua/wali" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parent_job">Pekerjaan Orang Tua/Wali</label>
+                                <input type="text" class="form-control" id="parent_job" name="parent_job"
+                                    placeholder="Masukkan pekerjaan orang tua/wali" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parent_phone">No Telepon Orang Tua/Wali</label>
+                                <input type="tel" class="form-control" id="parent_phone" name="parent_phone"
+                                    placeholder="Masukkan no telepon orang tua/wali" pattern="[0-9]{10,13}"
+                                    title="Nomor telepon harus antara 10-13 digit angka" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parent_address">Alamat Orang Tua/Wali</label>
+                                <textarea class="form-control" id="parent_address" name="parent_address" rows="3"
+                                    placeholder="Masukkan alamat orang tua/wali"></textarea>
+                            </div>
+
+                            <!-- Informasi Pendidikan Sebelumnya -->
+                            <h5>Informasi Pendidikan Sebelumnya</h5>
+                            <div class="form-group">
+                                <label for="school_name">Nama Sekolah Asal</label>
+                                <input type="text" class="form-control" id="school_name" name="school_name"
+                                    placeholder="Masukkan nama sekolah asal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="school_address">Alamat Sekolah Asal</label>
+                                <textarea class="form-control" id="school_address" name="school_address" rows="3"
+                                    placeholder="Masukkan alamat sekolah asal"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="graduation_year">Tahun Kelulusan</label>
+                                <input type="number" class="form-control" id="graduation_year" name="graduation_year"
+                                    placeholder="Masukkan tahun kelulusan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nisn">Nomor Induk Siswa Nasional (NISN)</label>
+                                <input type="number" class="form-control" id="nisn" name="nisn"
+                                    placeholder="Masukkan NISN" required>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <a href="daftarsiswa-success.html" class="btn btn-primary">Perbarui</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- /.content -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- Scripts -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+</body>
+
+</html>

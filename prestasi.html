@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK TEKNOLOGI BALUNG</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #FAFAFA;">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #664E86;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button" style="color: white;"><i
+                            class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt" style="color:#FAFAFA"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <p class="brand-link">
+                <span class="brand-text font-weight-semibold ml-2">e-PPDB</span>
+            </p>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="asset/photoProfile/blank-profile.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Aknal Arya Adi P</a>
+                        <div>
+                            <i class="material-icons" style="color: green; font-size: 12px;">circle</i>
+                            <a href="#">online</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="daftarsiswa.html" class="nav-link">
+                                <i class="nav-icon bi bi-people-fill"></i>
+                                <p>Formulir Pendaftaran</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon bi bi-check"></i>
+                                <p>Prestasi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="jurusan.html" class="nav-link">
+                                <i class="nav-icon bi bi-file"></i>
+                                <p>Berkas Pendukung</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="setting.html" class="nav-link">
+                                <i class="nav-icon bi bi-gear"></i>
+                                <p>Pengaturan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper" style="background-color: #FAFAFA;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-black">Prestasi Siswa</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <a href="#" class="btn btn-lg btn-primary mb-3">Tambah</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">List Prestasi Pendukung</h3>
+                        </div>
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>NAMA PRESTASI</th>
+                                        <th>JENIS</th>
+                                        <th>TAHUN</th>
+                                        <th>PENYELENGGARA</th>
+                                        <th>AKSI</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>OSN Nasional</td>
+                                        <td>Nasional</td>
+                                        <td>2021</td>
+                                        <td>KEMENDIKBUD 2021</td>
+                                        <td class="d-flex">
+                                            <button class="btn btn-danger mr-2"
+                                                onclick="ondeleteHandle('OSN Nasional')">Hapus</button>
+                                            <a href="#" class="btn btn-warning text-white">Edit</a>
+                                        </td>
+                                    </tr>
+                                    <!-- Tambahkan data lainnya jika diperlukan -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        const ondeleteHandle = (Prestasi) => {
+            Swal.fire({
+                title: 'Apakah kamu yakin?',
+                text: `Prestasi ${Prestasi} akan terhapus.`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, hapus!',
+                cancelButtonText: 'Tidak'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Terhapus!',
+                        `Prestasi ${Prestasi} telah dihapus.`,
+                        'success'
+                    )
+                    // Simulasi penghapusan baris tabel
+                    const rows = document.querySelectorAll("tbody tr");
+                    rows.forEach(row => {
+                        if (row.querySelector("td:nth-child(2)").innerText === Prestasi) {
+                            row.remove();
+                        }
+                    });
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

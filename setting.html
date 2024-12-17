@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK TEKNOLOGI BALUNG</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #f4f6f9;">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-normal" style="background-color: #664E86;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"
+                            style="color:#FAFAFA"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt" style="color:#FAFAFA"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <p class="brand-link">
+                <span class="brand-text font-weight-semibold ml-2">e-PPDB</span>
+            </p>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="asset/photoProfile/blank-profile.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Aknal Arya Adi P</a>
+                        <div>
+                            <i class="material-icons" style="color: green; font-size: 12px;">circle</i>
+                            <a href="#">online</a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="daftarsiswa.html" class="nav-link">
+                                <i class="nav-icon bi bi-people-fill"></i>
+                                <p>Formulir Pendaftaran</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="prestasi.html" class="nav-link">
+                                <i class="nav-icon bi bi-check"></i>
+                                <p>Prestasi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="jurusan.html" class="nav-link">
+                                <i class="nav-icon bi bi-file"></i>
+                                <p>Berkas Pendukung</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon bi bi-gear"></i>
+                                <p>Pengaturan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Pengaturan Akun</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Form Ubah Profil -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h3 class="card-title">Ubah Profil</h3>
+                                </div>
+                                <form>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="name">Nama Lengkap</label>
+                                            <input type="text" class="form-control" id="name"
+                                                placeholder="Masukkan nama lengkap">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Masukkan email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Nomor Telepon</label>
+                                            <input type="text" class="form-control" id="phone"
+                                                placeholder="Masukkan nomor telepon">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Form Ubah Password -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header bg-success text-white">
+                                    <h3 class="card-title">Ubah Password</h3>
+                                </div>
+                                <form>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="currentPassword">Password Lama</label>
+                                            <input type="password" class="form-control" id="currentPassword"
+                                                placeholder="Masukkan password lama">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="newPassword">Password Baru</label>
+                                            <input type="password" class="form-control" id="newPassword"
+                                                placeholder="Masukkan password baru">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmPassword">Konfirmasi Password Baru</label>
+                                            <input type="password" class="form-control" id="confirmPassword"
+                                                placeholder="Ulangi password baru">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-success">Perbarui Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Keluar Akun -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-footer text-center">
+                                    <a href="login.html" class="btn btn-danger btn-block">Keluar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard User - SMK Teknologi Balung</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #FAFAFA;">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #664E86;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button" style="color: white;"><i
+                            class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt" style="color:#FAFAFA"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <p class="brand-link">
+                <span class="brand-text font-weight-semibold ml-2">e-PPDB</span>
+            </p>
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="calon-siswa.html" class="nav-link">
+                                <i class="nav-icon bi bi-pencil-square"></i>
+                                <p>Manajemen Siswa</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="manajemen-akun.html" class="nav-link">
+                                <i class="nav-icon bi bi-megaphone"></i>
+                                <p>Buat Pengumuman</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="nav-icon bi bi-gear"></i>
+                                <p>Pengaturan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper" style="background-color: #FAFAFA;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-black">Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Statistik Singkat -->
+                    <div class="row">
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>2021</h3>
+                                    <p>Tahun Akademik</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-danger text-white">
+                                <div class="inner">
+                                    <h3>211</h3>
+                                    <p>Jumlah Pendaftar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3> 192/211</h3>
+                                    <p>Pendaftaran diverifikasi</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pengumuman -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pengumuman</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Jadwal PPDB: 01 Januari 2024 - 15 Maret 2024 <br>
+                                Pastikan seluruh dokumen pendukung diunggah sebelum batas waktu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.js"></script>
+</body>
+
+</html>

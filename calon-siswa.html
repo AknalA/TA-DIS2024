@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <!-- Add responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style="background-color: #F5F5F5;">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #664E86;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"
+                            style="color:#FAFAFA"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button"><i
+                            class="fas fa-expand-arrows-alt" style="color:#FAFAFA"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <p class="brand-link">
+                <span class="brand-text font-weight-semibold ml-2">e-PPDB</span>
+            </p>
+            <div class="sidebar">
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="admin-index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon bi bi-pencil-square"></i>
+                                <p>Manajemen Siswa</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="manajemen-akun.html" class="nav-link">
+                                <i class="nav-icon bi bi-megaphone"></i>
+                                <p>Buat Pengumuman</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="nav-icon bi bi-gear"></i>
+                                <p>Pengaturan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <div class="content-wrapper" style="background-color: #FFFFFF">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-black">Manajemen Data Calon Siswa</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <section class="content">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Calon Siswa</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Lengkap</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Asal Sekolah</th>
+                                        <th>No. Telepon</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aknal Arya Adi Prakasa</td>
+                                        <td>Laki-laki</td>
+                                        <td>SMP Negeri 1 Balung</td>
+                                        <td>08123456789</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm btn-detail"
+                                                data-nama="Aknal Arya Adi Prakasa" data-email="aknalap@gmail.com"
+                                                data-notelp="08123456789" data-gender="Laki-laki"
+                                                data-birthdate="2004-03-12" data-address="Jl. Mawar No. 10, Balung"
+                                                data-photo="dist\img\user1-128x128.jpg" data-parent-name="Budi Setiawan"
+                                                data-parent-job="Wiraswasta" data-parent-phone="08123456780"
+                                                data-parent-address="Jl. Merah No. 5, Balung"
+                                                data-school-name="SMP Negeri 1 Balung"
+                                                data-school-address="Jl. Pendidikan No. 20, Balung"
+                                                data-graduation-year="2023" data-nisn="1234567890123456"
+                                                data-status="pending">
+                                                <i class="fas fa-eye"></i> Detail
+                                            </button>
+                                            <button class="btn btn-success btn-sm btn-approve">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-danger btn-sm btn-reject">
+                                                <i class="fas fa-times"></i> Tolak
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Bella Sukma Dewi</td>
+                                        <td>Perempuan</td>
+                                        <td>SMP Negeri 2 Jember</td>
+                                        <td>08133456789</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm btn-detail" data-nama="Bella Sukma Dewi"
+                                                data-email="bella.sukma@gmail.com" data-notelp="08133456789"
+                                                data-gender="Perempuan" data-birthdate="2005-05-10"
+                                                data-address="Jl. Anggrek No. 15, Jember"
+                                                data-photo="dist\img\user2-128x128.jpg" data-parent-name="Andi Pratama"
+                                                data-parent-job="Guru" data-parent-phone="08123498765"
+                                                data-parent-address="Jl. Mawar No. 20, Jember"
+                                                data-school-name="SMP Negeri 2 Jember"
+                                                data-school-address="Jl. Raya No. 30, Jember"
+                                                data-graduation-year="2023" data-nisn="2234567890123456"
+                                                data-status="pending">
+                                                <i class="fas fa-eye"></i> Detail
+                                            </button>
+                                            <button class="btn btn-success btn-sm btn-approve">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-danger btn-sm btn-reject">
+                                                <i class="fas fa-times"></i> Tolak
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Cahyo Pratama</td>
+                                        <td>Laki-laki</td>
+                                        <td>SMP Al-Hikmah</td>
+                                        <td>08127896543</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm btn-detail" data-nama="Cahyo Pratama"
+                                                data-email="cahyopr@gmail.com" data-notelp="08127896543"
+                                                data-gender="Laki-laki" data-birthdate="2004-12-25"
+                                                data-address="Jl. Melati No. 8, Lumajang"
+                                                data-photo="dist\img\user3-128x128.jpg" data-parent-name="Sutrisno"
+                                                data-parent-job="Petani" data-parent-phone="08123423456"
+                                                data-parent-address="Jl. Kamboja No. 5, Lumajang"
+                                                data-school-name="SMP Al-Hikmah"
+                                                data-school-address="Jl. Pendidikan No. 2, Lumajang"
+                                                data-graduation-year="2023" data-nisn="3234567890123456"
+                                                data-status="pending">
+                                                <i class="fas fa-eye"></i> Detail
+                                            </button>
+                                            <button class="btn btn-success btn-sm btn-approve">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-danger btn-sm btn-reject">
+                                                <i class="fas fa-times"></i> Tolak
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Dina Ayu Lestari</td>
+                                        <td>Perempuan</td>
+                                        <td>SMP Harapan Bangsa</td>
+                                        <td>08127894561</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm btn-detail" data-nama="Dina Ayu Lestari"
+                                                data-email="dina.ayu@gmail.com" data-notelp="08127894561"
+                                                data-gender="Perempuan" data-birthdate="2005-01-15"
+                                                data-address="Jl. Kenanga No. 12, Banyuwangi"
+                                                data-photo="dist\img\user4-128x128.jpg" data-parent-name="Sri Lestari"
+                                                data-parent-job="Pegawai Negeri" data-parent-phone="08123455567"
+                                                data-parent-address="Jl. Cempaka No. 7, Banyuwangi"
+                                                data-school-name="SMP Harapan Bangsa"
+                                                data-school-address="Jl. Sukarno Hatta No. 10, Banyuwangi"
+                                                data-graduation-year="2023" data-nisn="4234567890123456"
+                                                data-status="pending">
+                                                <i class="fas fa-eye"></i> Detail
+                                            </button>
+                                            <button class="btn btn-success btn-sm btn-approve">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-danger btn-sm btn-reject">
+                                                <i class="fas fa-times"></i> Tolak
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Eko Saputra</td>
+                                        <td>Laki-laki</td>
+                                        <td>SMP PGRI</td>
+                                        <td>08134567890</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm btn-detail" data-nama="Eko Saputra"
+                                                data-email="eko.saputra@gmail.com" data-notelp="08134567890"
+                                                data-gender="Laki-laki" data-birthdate="2004-06-17"
+                                                data-address="Jl. Flamboyan No. 3, Bondowoso"
+                                                data-photo="dist\img\user5-128x128.jpg"
+                                                data-parent-name="Rahmat Saputra" data-parent-job="Pengusaha"
+                                                data-parent-phone="08133333333"
+                                                data-parent-address="Jl. Bunga Matahari No. 10, Bondowoso"
+                                                data-school-name="SMP PGRI"
+                                                data-school-address="Jl. Jend. Sudirman No. 20, Bondowoso"
+                                                data-graduation-year="2023" data-nisn="5234567890123456"
+                                                data-status="pending">
+                                                <i class="fas fa-eye"></i> Detail
+                                            </button>
+                                            <button class="btn btn-success btn-sm btn-approve">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                            <button class="btn btn-danger btn-sm btn-reject">
+                                                <i class="fas fa-times"></i> Tolak
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- Tambahkan data lainnya di sini -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#"
+                                    style="background-color: #007BFF; color: #FAFAFA;">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.js"></script>
+
+    <script>
+        // JavaScript untuk tombol detail, approve, reject
+        document.querySelectorAll('.btn-detail').forEach((button) => {
+            button.addEventListener('click', () => {
+                const nama = button.getAttribute('data-nama');
+                const email = button.getAttribute('data-email');
+                const notelp = button.getAttribute('data-notelp');
+                const gender = button.getAttribute('data-gender');
+                const birthdate = button.getAttribute('data-birthdate');
+                const address = button.getAttribute('data-address');
+                const parentName = button.getAttribute('data-parent-name');
+                const parentJob = button.getAttribute('data-parent-job');
+                const parentPhone = button.getAttribute('data-parent-phone');
+                const parentAddress = button.getAttribute('data-parent-address');
+                const schoolName = button.getAttribute('data-school-name');
+                const schoolAddress = button.getAttribute('data-school-address');
+                const graduationYear = button.getAttribute('data-graduation-year');
+                const nisn = button.getAttribute('data-nisn');
+                const status = button.getAttribute('data-status');
+
+                // Status handling with icons
+                let statusIcon;
+                let statusText;
+
+                if (status === 'approved') {
+                    statusIcon = '<i class="fas fa-check-circle" style="color: green; font-size: 24px;"></i>';
+                    statusText = 'Approved';
+                } else if (status === 'rejected') {
+                    statusIcon = '<i class="fas fa-times-circle" style="color: red; font-size: 24px;"></i>';
+                    statusText = 'Rejected';
+                } else if (status === 'pending') {
+                    statusIcon = '<i class="fas fa-hourglass-half" style="color: orange; font-size: 24px;"></i>';
+                    statusText = 'Pending';
+                }
+
+                // Display detail in SweetAlert
+                Swal.fire({
+                    title: 'Detail Siswa',
+                    html: `
+                    <div style="text-align: left; font-family: Arial, sans-serif; font-size: 14px;">
+                        <h4>Informasi Pribadi</h4>
+                        <p><strong>Nama:</strong> ${nama}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>No Telepon:</strong> ${notelp}</p>
+                        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+                        <p><strong>Tanggal Lahir:</strong> ${birthdate}</p>
+                        <p><strong>Alamat Lengkap:</strong> ${address}</p>
+                        <h4>Informasi Orang Tua/Wali</h4>
+                        <p><strong>Nama Orang Tua/Wali:</strong> ${parentName}</p>
+                        <p><strong>Pekerjaan Orang Tua/Wali:</strong> ${parentJob}</p>
+                        <p><strong>No Telepon Orang Tua/Wali:</strong> ${parentPhone}</p>
+                        <p><strong>Alamat Orang Tua/Wali:</strong> ${parentAddress}</p>
+                        <h4>Informasi Pendidikan Sebelumnya</h4>
+                        <p><strong>Nama Sekolah Asal:</strong> ${schoolName}</p>
+                        <p><strong>Alamat Sekolah Asal:</strong> ${schoolAddress}</p>
+                        <p><strong>Tahun Kelulusan:</strong> ${graduationYear}</p>
+                        <p><strong>NISN:</strong> ${nisn}</p>
+                        <h4>Status</h4>
+                        <p>${statusIcon} ${statusText}</p>
+                    </div>
+                `,
+                    icon: 'info',
+                    confirmButtonText: 'Tutup',
+                });
+            });
+        });
+
+        // Handle Approve button
+        document.querySelectorAll('.btn-approve').forEach((button) => {
+            button.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Apakah Anda yakin?',
+                    text: "Data siswa akan disetujui.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, setujui!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Disetujui!',
+                            'Data siswa telah disetujui.',
+                            'success'
+                        );
+                    }
+                });
+            });
+        });
+
+        // Handle Reject button
+        document.querySelectorAll('.btn-reject').forEach((button) => {
+            button.addEventListener('click', () => {
+                Swal.fire({
+                    title: 'Apakah Anda yakin?',
+                    text: "Data siswa akan ditolak.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, tolak!',
+                    cancelButtonText: 'Batal'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            'Ditolak!',
+                            'Data siswa telah ditolak.',
+                            'error'
+                        );
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

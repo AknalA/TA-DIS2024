@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK TEKNOLOGI BALUNG - Registrasi</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AdminLTE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f6f9;
+            margin: 0;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        .content-container .image-section {
+            flex: 1;
+            background: url('asset/image.png') no-repeat center center;
+            background-size: cover;
+            min-height: 400px;
+        }
+
+        .content-container .form-section {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .form-section .card-header {
+            text-align: center;
+        }
+
+        /* Media Query untuk Responsif */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column; /* Ubah ke kolom untuk tampilan layar kecil */
+                align-items: stretch; /* Buat agar card dan gambar memenuhi lebar */
+            }
+
+            .content-container .image-section {
+                min-height: 200px; /* Sesuaikan ukuran gambar pada layar kecil */
+                width: 100%; /* Agar gambar memenuhi lebar layar */
+            }
+
+            .content-container .form-section {
+                width: 100%; /* Membuat form section mengisi lebar layar */
+                padding: 20px; /* Sesuaikan padding untuk perangkat kecil */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <!-- Bagian Kiri: Gambar -->
+        <div class="image-section"></div>
+
+        <!-- Bagian Kanan: Form Registrasi -->
+        <div class="form-section">
+            <div class="card card-outline card-primary">
+                <div class="card-header">
+                    <h1 class="h1">SMK TEKNOLOGI BALUNG</h1>
+                </div>
+                <div class="card-body">
+                    <p class="login-box-msg">Daftar untuk mengelola pendaftaran siswa baru</p>
+                    <form action="#" method="post">
+                        <!-- Input Nama Lengkap -->
+                        <div class="input-group mb-3">
+                            <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Input Email -->
+                        <div class="input-group mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Input Password -->
+                        <div class="input-group mb-3">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Input Konfirmasi Password -->
+                        <div class="input-group mb-3">
+                            <input type="password" name="confirm_password" class="form-control" placeholder="Konfirmasi Password" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tombol Daftar -->
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Link Ke Halaman Login -->
+                    <div class="row mt-3">
+                        <div class="col-12 text-center">
+                            <a href="login.html" class="btn btn-secondary btn-block">Sudah Punya Akun? Masuk</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+</body>
+
+</html>

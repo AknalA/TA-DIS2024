@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK TEKNOLOGI BALUNG - Login</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- AdminLTE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f6f9;
+            margin: 0;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        .content-container .image-section {
+            flex: 1;
+            background: url('asset/image.png') no-repeat center center;
+            background-size: cover;
+            min-height: 400px;
+        }
+
+        .content-container .form-section {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .form-section .card-header {
+            text-align: center;
+        }
+
+        .btn-max-width {
+            width: 100%;
+        }
+
+        /* Media Query untuk Responsif */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .content-container .image-section {
+                min-height: 200px;
+                width: 100%;
+            }
+
+            .content-container .form-section {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <!-- Bagian Kiri: Gambar -->
+        <div class="image-section"></div>
+
+        <!-- Bagian Kanan: Form Login -->
+        <div class="form-section">
+            <div class="card card-outline card-primary">
+                <div class="card-header">
+                    <h1 class="h1">SMK TEKNOLOGI BALUNG</h1>
+                </div>
+                <div class="card-body">
+                    <p class="login-box-msg">Masuk untuk mengelola pendaftaran siswa baru</p>
+                    <form id="login-form">
+                        <div class="input-group mb-3">
+                            <input type="email" id="email" class="form-control" placeholder="Email" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary btn-max-width">Masuk</button>
+                        </div>
+
+                        <!-- Tambahan link untuk Registrasi -->
+                        <div class="text-center mt-3">
+                            <p>Belum punya akun? 
+                                <a href="register.html" class="text-primary font-weight-bold">Daftar di sini</a>
+                            </p>
+                        </div>
+                    </form>
+                    <div id="error-message" class="text-danger mt-2" style="display: none;">Email atau password salah!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+    <!-- Custom JS for Login Logic -->
+    <script>
+        $(document).ready(function () {
+            $('#login-form').on('submit', function (e) {
+                e.preventDefault();
+                let email = $('#email').val();
+                let password = $('#password').val();
+
+                // Cek apakah email dan password sesuai (logika untuk demo, bisa diganti dengan API atau backend)
+                if (email === 'admin@gmail.com' && password === 'admin123') {
+                    alert('Login sukses sebagai Admin');
+                    // Arahkan ke halaman admin
+                    window.location.href = 'admin-index.html';
+                } else if (email === 'user@gmail.com' && password === 'user123') {
+                    alert('Login sukses sebagai User');
+                    // Arahkan ke halaman user
+                    window.location.href = 'index.html';
+                } else {
+                    // Menampilkan pesan error jika login gagal
+                    $('#error-message').show();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
