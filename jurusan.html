@@ -125,43 +125,42 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <a href="#" class="btn btn-lg btn-primary mb-3">Tambah Berkas</a>
+<a href="#" class="btn btn-lg btn-primary mb-3" onclick="onAddClick()">Tambah Berkas</a>
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">List Berkas Pendukung</h3>
                         </div>
                         <div class="card-body">
-                            <!-- Tabel Responsif -->
-                            <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>NO</th>
-                                            <th>NAMA BERKAS</th>
-                                            <th>KETERANGAN</th>
-                                            <th>TIPE</th>
-                                            <th>UKURAN</th>
-                                            <th>AKSI</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Surat Keterangan Lulus</td>
-                                            <td>Dokumen kelulusan siswa</td>
-                                            <td>PDF</td>
-                                            <td>500 KB</td>
-                                            <td class="d-flex">
-                                                <button class="btn btn-danger mr-2" onclick="ondeleteHandle('Surat Keterangan Lulus')">Hapus</button>
-                                                <a href="#" class="btn btn-warning text-white">Edit</a>
-                                            </td>
-                                        </tr>
-                                        <!-- Tambahkan data lainnya jika diperlukan -->
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- Akhir Tabel Responsif -->
-                        </div>
+    <!-- Tabel Responsif -->
+    <div class="table-responsive">
+        <table id="example1" class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>NAMA BERKAS</th>
+                    <th>KETERANGAN</th>
+                    <th>TIPE</th>
+                    <th>UKURAN</th>
+                    <th>AKSI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Surat Keterangan Lulus</td>
+                    <td>Dokumen kelulusan siswa</td>
+                    <td>PDF</td>
+                    <td>500 KB</td>
+                    <td class="d-flex">
+                        <button class="btn btn-danger mr-2" onclick="ondeleteHandle('Surat Keterangan Lulus')">Hapus</button>
+                        <a href="#" class="btn btn-warning text-white">Edit</a>
+                    </td>
+                </tr>
+                <!-- Tambahkan data lainnya jika diperlukan -->
+            </tbody>
+        </table>
+    </div>
+</div>
                     </div>
                 </div>
             </section>
@@ -201,6 +200,29 @@
                 }
             })
         }
+
+        const onAddClick = () => {
+    Swal.fire({
+        title: 'Tambah Berkas',
+        text: 'Apakah Anda ingin menambahkan berkas baru?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, Tambah!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Berhasil!',
+                'Berkas baru telah ditambahkan (Simulasi).',
+                'success'
+            );
+            // Redirect atau aksi lainnya bisa ditambahkan di sini.
+        }
+    });
+};
+
     </script>
 </body>
 
