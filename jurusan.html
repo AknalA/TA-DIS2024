@@ -125,7 +125,8 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-<a href="#" class="btn btn-lg btn-primary mb-3" onclick="onAddClick()">Tambah Berkas</a>
+                    <a href="#" class="btn btn-lg btn-primary mb-3" onclick="onAddForm()">Tambah Berkas</a>
+
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">List Berkas Pendukung</h3>
@@ -201,27 +202,75 @@
             })
         }
 
-        const onAddClick = () => {
+        const onAddForm = () => {
     Swal.fire({
         title: 'Tambah Berkas',
-        text: 'Apakah Anda ingin menambahkan berkas baru?',
-        icon: 'question',
+        html: `
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="berkasName">Nama Berkas</label>
+                    <input type="text" id="berkasName" class="form-control" placeholder="Masukkan nama berkas" required>
+                </div>
+                <div class="form-group">
+                    <label for="keterangan">Keterangan</label>
+                    <select id="keterangan" class="form-control" required>
+                        <option value="" disabled selected>Pilih keterangan</option>
+                        <option value="Dokumen Kelulusan">Dokumen Kelulusan</option>
+                        <option value="Rapor">Rapor</option>
+                        <option value="Sertifikat">Sertifikat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fileInput">Pilih File</label>
+                    <input type="file" id="fileInput" class="form-control" required>
+                </div>
+            </form>
+        `,
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Ya, Tambah!',
-        cancelButtonText: 'Batal'
+        confirmButtonText: 'Simpan',
+        cancelButtonText: 'Batal',
+        preConfirm: () => {
+            const berkasName = document.getElementById('berkasName').value;
+            const keterangan = document.getElementById('keterangan').value;
+            const fileInput = document.getElementById('fileInput').files[0];
+
+            if (!berkasName || !keterangan || !fileInput) {
+                Swal.showValidationMessage('Semua field harus diisi!');
+                return false;
+            }
+
+            return { berkasName, keterangan, fileName: fileInput.name };
+        }
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
-                'Berhasil!',
-                'Berkas baru telah ditambahkan (Simulasi).',
-                'success'
-            );
-            // Redirect atau aksi lainnya bisa ditambahkan di sini.
+            const { berkasName, keterangan, fileName } = result.value;
+
+            Swal.fire({
+                title: 'Berhasil!',
+                text: `Berkas "${berkasName}" dengan keterangan "${keterangan}" dan file "${fileName}" berhasil ditambahkan.`,
+                icon: 'success'
+            });
+
+            // Tambahkan data ke tabel atau lakukan aksi lainnya
+            const tableBody = document.querySelector("table tbody");
+            const newRow = `
+                <tr>
+                    <td>${tableBody.children.length + 1}</td>
+                    <td>${berkasName}</td>
+                    <td>${keterangan}</td>
+                    <td>${fileName.split('.').pop().toUpperCase()}</td>
+                    <td>500 KB</td>
+                    <td class="d-flex">
+                        <button class="btn btn-danger mr-2">Hapus</button>
+                        <a href="#" class="btn btn-warning text-white">Edit</a>
+                    </td>
+                </tr>
+            `;
+            tableBody.innerHTML += newRow;
         }
     });
 };
+
 
     </script>
 </body>
