@@ -154,7 +154,7 @@
                     <td>500 KB</td>
                     <td class="d-flex">
                         <button class="btn btn-danger mr-2" onclick="ondeleteHandle('Surat Keterangan Lulus')">Hapus</button>
-                        <a href="#" class="btn btn-warning text-white">Edit</a>
+                        <a href="#" class="btn btn-warning text-white" onclick="onEditForm(this)">Edit</a>
                     </td>
                 </tr>
                 <!-- Tambahkan data lainnya jika diperlukan -->
@@ -267,6 +267,79 @@
                 </tr>
             `;
             tableBody.innerHTML += newRow;
+        }
+    });
+};
+
+        const onEditForm = (editButton) => {
+    // Dapatkan baris data dari tombol edit
+    const row = editButton.closest("tr");
+    const cells = row.querySelectorAll("td");
+    const currentData = {
+        no: cells[0].innerText,
+        namaBerkas: cells[1].innerText,
+        keterangan: cells[2].innerText,
+        tipe: cells[3].innerText,
+    };
+
+    Swal.fire({
+        title: 'Edit Berkas',
+        html: `
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editBerkasName">Nama Berkas</label>
+                    <input type="text" id="editBerkasName" class="form-control" value="${currentData.namaBerkas}" required>
+                </div>
+                <div class="form-group">
+                    <label for="editKeterangan">Keterangan</label>
+                    <select id="editKeterangan" class="form-control" required>
+                        <option value="" disabled ${!currentData.keterangan ? 'selected' : ''}>Pilih keterangan</option>
+                        <option value="Dokumen Kelulusan" ${currentData.keterangan === 'Dokumen Kelulusan' ? 'selected' : ''}>Dokumen Kelulusan</option>
+                        <option value="Rapor" ${currentData.keterangan === 'Rapor' ? 'selected' : ''}>Rapor</option>
+                        <option value="Sertifikat" ${currentData.keterangan === 'Sertifikat' ? 'selected' : ''}>Sertifikat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editFileInput">Pilih File (Opsional)</label>
+                    <input type="file" id="editFileInput" class="form-control">
+                </div>
+            </form>
+        `,
+        showCancelButton: true,
+        confirmButtonText: 'Simpan',
+        cancelButtonText: 'Batal',
+        preConfirm: () => {
+            const editBerkasName = document.getElementById('editBerkasName').value;
+            const editKeterangan = document.getElementById('editKeterangan').value;
+            const editFileInput = document.getElementById('editFileInput').files[0];
+
+            if (!editBerkasName || !editKeterangan) {
+                Swal.showValidationMessage('Nama Berkas dan Keterangan wajib diisi!');
+                return false;
+            }
+
+            return {
+                namaBerkas: editBerkasName,
+                keterangan: editKeterangan,
+                fileName: editFileInput ? editFileInput.name : null,
+            };
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const { namaBerkas, keterangan, fileName } = result.value;
+
+            // Perbarui data pada tabel
+            cells[1].innerText = namaBerkas;
+            cells[2].innerText = keterangan;
+            if (fileName) {
+                cells[3].innerText = fileName.split('.').pop().toUpperCase(); // Update tipe file
+            }
+
+            Swal.fire({
+                title: 'Berhasil!',
+                text: `Berkas "${namaBerkas}" telah diperbarui.`,
+                icon: 'success',
+            });
         }
     });
 };
